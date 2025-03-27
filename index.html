@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simulador RS Schaefer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="img/logo.jpg" alt="Logo RS Schaefer" class="logo"/>
+    <h1>Simulador RS Schaefer</h1>
+  </header>
+  <main>
+    <section id="formulario">
+      <h2>Monte sua mesa</h2>
+      <label>Nome: <input type="text" id="nome" /></label>
+      <label>Cidade: <input type="text" id="cidade" /></label>
+      <label>Modelo:
+        <select id="modelo">
+          <option value="resina">Resina</option>
+          <option value="clasica">Clásica</option>
+          <option value="cascata">Cascata</option>
+          <option value="demolicao">Demolição</option>
+          <option value="redonda">Redonda</option>
+        </select>
+      </label>
+      <label>Largura (cm): <input type="number" id="largura" value="100" /></label>
+      <label>Comprimento (cm): <input type="number" id="comprimento" value="200" /></label>
+      <button onclick="gerarResumo()">Ver resumo</button>
+    </section>
+    <section id="resumo" style="display:none;">
+      <h2>Resumo do Pedido</h2>
+      <div id="detalhes"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
